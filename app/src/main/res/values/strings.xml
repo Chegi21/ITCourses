@@ -1,3 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ITCourses</string>
+    <string name="app_name">IT Курсы</string>
+
+    <!-- Login -->
+    <string name="login_title">Вход</string>
+    <string name="email">Email</string>
+    <string name="hint_email">example@gmail.com</string>
+    <string name="password">Пароль</string>
+    <string name="hint_password">Введите пароль</string>
+    <string name="btn_login">Вход</string>
+    <string name="btn_register">Регестрация</string>
+    <string name="btn_no_auth">Нет аккаунта?</string>
+    <string name="btn_forgot_password">Забыл пароль</string>
+    <string name="error_email">не верный формат email</string>
+
+    <!-- Main -->
+    <string name="hint_search">Искать курсы</string>
+    <string name="filter">По дате добавления</string>
+    <string name="detail">Подробнее</string>
+
+    <!-- Favorites -->
+    <string name="label_favorites">Избранное</string>
+    <string name="empty_favorites">Нет избранных курсов</string>
+
+    <!-- Profile -->
+    <string name="label_account">Профиль</string>
+    <string name="label_stub">Экран в разработке</string>
+
+    <!-- Bottom nav -->
+    <string name="nav_home">Главная</string>
+    <string name="nav_favorites">Избранное</string>
+    <string name="nav_account">Аккаунт</string>
+
+    <!-- URLs -->
+    <string name="url_vk">https://vk.com/</string>
+    <string name="url_ok">https://ok.ru/</string>
 </resources>

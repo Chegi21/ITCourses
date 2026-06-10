@@ -8,6 +8,17 @@ material = "1.14.0"
 activity = "1.13.0"
 constraintlayout = "2.2.1"
 
+navFragmentV = "2.9.8"
+navUiV = "2.9.8"
+retrofitV = "3.0.0"
+okhttp3V = "4.12.0"
+roomRuntime = "2.8.3"
+roomCompiler = "2.8.3"
+lifecycleLivedataKtx = "2.9.4"
+lifecycleViewmodelKtx = "2.9.4"
+gsonV = "2.10.1"
+adapterV = "4.3.2"
+
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -16,6 +27,19 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitV" }
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitV" }
+okhttp3 = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3V" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gsonV" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomRuntime" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomCompiler" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+navigationF = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navFragmentV" }
+navigationUi = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navUiV" }
+adapter = { group = "com.hannesdorfmann", name = "adapterdelegates4", version.ref = "adapterV" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
