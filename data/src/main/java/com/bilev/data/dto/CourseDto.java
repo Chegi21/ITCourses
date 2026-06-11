@@ -3,7 +3,6 @@ package com.bilev.data.dto;
 import com.google.gson.annotations.SerializedName;
 
 public class CourseDto {
-
     @SerializedName("id")
     private int id;
 

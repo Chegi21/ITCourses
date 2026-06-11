@@ -7,7 +7,6 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -20,13 +19,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private ActivityLoginBinding binding;
     private LoginViewModel viewModel;
+    private boolean emailTouched = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        EdgeToEdge.enable(this);
-
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -34,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         observeState();
         setupFields();
         setupButtons();
+        setupFocusListeners();
     }
 
     private void initViewModel() {
@@ -44,17 +42,27 @@ public class LoginActivity extends AppCompatActivity {
     private void observeState() {
         viewModel.getState().observe(this, state -> {
             binding.btnLogin.setEnabled(state.canLogin);
-            binding.etEmail.setError(state.emailValid ? null : getString(R.string.error_email));
+
+            if (emailTouched) {
+                binding.etEmail.setError(
+                        state.emailValid ? null : getString(R.string.error_email)
+                );
+            }
         });
     }
 
     private void setupFields() {
         InputFilter cyrillicFilter = (source, start, end, dest, dstart, dend) -> {
+            StringBuilder result = new StringBuilder();
+
             for (int i = start; i < end; i++) {
                 char c = source.charAt(i);
-                if (c >= 'Ѐ' && c <= 'ӿ') return "";
+                if (!(c >= 'Ѐ' && c <= 'ӿ')) {
+                    result.append(c);
+                }
             }
-            return null;
+
+            return result.toString();
         };
 
         binding.etEmail.setFilters(new InputFilter[]{cyrillicFilter});
@@ -81,10 +89,16 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         binding.btnVk.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://vk.com/"))));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.url_vk)))));
 
         binding.btnOk.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://ok.ru/"))));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.url_ok)))));
+    }
+
+    private void setupFocusListeners() {
+        binding.etEmail.setOnFocusChangeListener((v, hasFocus) -> {
+            emailTouched = hasFocus;
+        });
     }
 
     @Override

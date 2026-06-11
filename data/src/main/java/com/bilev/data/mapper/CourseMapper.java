@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CourseMapper {
-
     public static Course fromDto(CourseDto dto, boolean isFavorite) {
         return new Course(
                 dto.getId(),
@@ -17,7 +16,7 @@ public class CourseMapper {
                 dto.getPrice(),
                 dto.getRate(),
                 dto.getStartDate(),
-                isFavorite || dto.isHasLike(),
+                isFavorite,
                 dto.getPublishDate()
         );
     }

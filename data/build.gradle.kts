@@ -1,19 +1,16 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
 }
 
 android {
-    namespace = "com.bilev.data"
-    compileSdk = 35
+    namespace = "com.bilev.date"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.bilev.data"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -42,6 +39,7 @@ dependencies {
 
     annotationProcessor(libs.room.compiler)
     implementation(libs.room.runtime)
+
 
     implementation(libs.appcompat)
     implementation(libs.material)

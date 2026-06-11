@@ -15,7 +15,7 @@ public class FavoritesViewModel extends ViewModel {
     private final ToggleFavoriteUseCase toggleFavoriteUseCase;
 
     public FavoritesViewModel(GetFavoriteCoursesUseCase getFavoriteCoursesUseCase,
-                               ToggleFavoriteUseCase toggleFavoriteUseCase) {
+                              ToggleFavoriteUseCase toggleFavoriteUseCase) {
         this.getFavoriteCoursesUseCase = getFavoriteCoursesUseCase;
         this.toggleFavoriteUseCase = toggleFavoriteUseCase;
     }

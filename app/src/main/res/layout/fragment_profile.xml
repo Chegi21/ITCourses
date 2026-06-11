@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingHorizontal="16dp"
-        android:paddingTop="16dp"
+        android:paddingTop="48dp"
         android:text="@string/label_account"
         android:textColor="@color/white"
         android:textSize="22sp"

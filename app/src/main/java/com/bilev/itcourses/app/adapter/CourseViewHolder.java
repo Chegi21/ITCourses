@@ -1,6 +1,7 @@
 package com.bilev.itcourses.app.adapter;
 
 import android.graphics.Color;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bilev.domain.model.Course;
@@ -42,7 +43,7 @@ public class CourseViewHolder extends RecyclerView.ViewHolder {
     private String formatDate(String raw) {
         if (raw == null || raw.isEmpty()) return "";
 
-        DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         DateTimeFormatter outFormatter = DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("ru"));
 
         LocalDate date = LocalDate.parse(raw, inputFormatter);

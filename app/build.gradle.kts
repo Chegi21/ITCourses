@@ -1,10 +1,11 @@
 plugins {
     alias(libs.plugins.android.application)
+
 }
 
 android {
     namespace = "com.bilev.itcourses"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.bilev.itcourses"
@@ -36,8 +37,8 @@ android {
 }
 
 dependencies {
-    implementation (project(":domain"))
-    implementation (project(":data"))
+    implementation(project(":domain"))
+    implementation(project(":data"))
 
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)

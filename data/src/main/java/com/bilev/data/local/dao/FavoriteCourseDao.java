@@ -12,7 +12,6 @@ import java.util.List;
 
 @Dao
 public interface FavoriteCourseDao {
-
     @Query("SELECT * FROM favorite_courses")
     LiveData<List<FavoriteCourseEntity>> getAllFavorites();
 

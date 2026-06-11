@@ -13,6 +13,7 @@
     <string name="btn_no_auth">Нет аккаунта?</string>
     <string name="btn_forgot_password">Забыл пароль</string>
     <string name="error_email">не верный формат email</string>
+    <string name="error_password">не верный формат пароля</string>
 
     <!-- Main -->
     <string name="hint_search">Искать курсы</string>

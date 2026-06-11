@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -50,15 +51,19 @@
                 style="@style/Widget.ITCourses.TextInputLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:hint="@string/hint_email"
+                app:hintAnimationEnabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_email">
+                app:layout_constraintTop_toBottomOf="@+id/tv_email"
+                app:shapeAppearanceOverlay="@style/Shape.ITCourses.TextInput">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_email"
+                    style="@style/Widget.ITCourses.TextInputEditText"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress" />
 
@@ -82,16 +87,19 @@
                 style="@style/Widget.ITCourses.TextInputLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:hint="@string/hint_password"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_password"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                app:shapeAppearanceOverlay="@style/Shape.ITCourses.TextInput">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_password"
+                    style="@style/Widget.ITCourses.TextInputEditText"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:imeOptions="actionDone"
                     android:inputType="textPassword" />
 
@@ -144,44 +152,42 @@
                 android:id="@+id/btn_login"
                 style="@style/Widget.ITCourses.Button.Filled"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:enabled="false"
                 android:text="@string/btn_login"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/til_password" />
+                app:layout_constraintTop_toBottomOf="@+id/til_password"
+                app:shapeAppearance="@style/Shape.ITCourses.TextInput" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:orientation="horizontal"
-                android:weightSum="100"
+                android:weightSum="2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
                 <ImageButton
                     android:id="@+id/btn_vk"
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
                     android:background="@drawable/bg_social_button_vk"
                     android:src="@drawable/vk" />
 
                 <ImageButton
                     android:id="@+id/btn_ok"
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:background="@drawable/bg_social_button_ok"
-                    android:src="@drawable/ok"
-                    tools:ignore="MissingConstraints" />
+                    android:src="@drawable/ok" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

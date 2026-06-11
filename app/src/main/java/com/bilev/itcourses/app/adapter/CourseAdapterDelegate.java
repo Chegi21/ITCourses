@@ -2,12 +2,14 @@ package com.bilev.itcourses.app.adapter;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bilev.domain.model.Course;
 import com.bilev.itcourses.databinding.ItemCourseBinding;
 import com.hannesdorfmann.adapterdelegates4.AdapterDelegate;
+
 import java.util.List;
 
 public class CourseAdapterDelegate extends AdapterDelegate<List<Course>> {

@@ -22,13 +22,39 @@ public class Course {
         this.publishDate = publishDate;
     }
 
-    public int getId() { return id; }
-    public String getTitle() { return title; }
-    public String getText() { return text; }
-    public String getPrice() { return price; }
-    public String getRate() { return rate; }
-    public String getStartDate() { return startDate; }
-    public boolean isHasLike() { return hasLike; }
-    public void setHasLike(boolean hasLike) { this.hasLike = hasLike; }
-    public String getPublishDate() { return publishDate; }
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public String getRate() {
+        return rate;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public boolean isHasLike() {
+        return hasLike;
+    }
+
+    public void setHasLike(boolean hasLike) {
+        this.hasLike = hasLike;
+    }
+
+    public String getPublishDate() {
+        return publishDate;
+    }
 }

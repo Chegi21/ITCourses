@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 
 import com.bilev.domain.model.Course;
 import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter;
+
 import java.util.List;
 
 public class CoursesAdapter extends ListDelegationAdapter<List<Course>> {

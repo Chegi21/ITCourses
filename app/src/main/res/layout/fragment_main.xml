@@ -8,7 +8,6 @@
     android:paddingStart="16dp"
     android:paddingEnd="16dp">
 
-    <!-- Поиск — нефункциональный -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_search"
         style="@style/Widget.ITCourses.TextInputLayout"
@@ -20,6 +19,7 @@
         app:layout_constraintEnd_toStartOf="@id/iv_filter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Shape.ITCourses.TextInput"
         app:startIconDrawable="@drawable/ic_search"
         app:startIconTint="@color/white">
 
@@ -34,7 +34,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Иконка фильтра — нефункциональная -->
     <ImageView
         android:id="@+id/iv_filter"
         android:layout_width="48dp"
@@ -45,8 +44,6 @@
         app:layout_constraintBottom_toBottomOf="@id/til_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/til_search" />
-
-    <!-- Строка "Курсы" + кнопка сортировки -->
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -82,7 +79,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:clipToPadding="false"
-        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
         android:paddingBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
